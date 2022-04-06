@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		.blink-bg{
+			color: #fff;
+			animation: blinkingBackground 1s infinite;
+			color: #000000;
+			border-style: solid;
+			box-sizing: border-box;
+			border-width: thick;
+			font-weight: bold;
+		}
+		@keyframes blinkingBackground {
+			0%		{ border-color: #000000; }
+			50%		{ border-color: #ffffff; }
+			100%	{ border-color: #000000; }
+		}
+	</style>
+	<head>
+		<title>Maze</title>
+		<script type="text/javascript" src="index.js?v=1"></script>
+	</head>
+	<body>
+		<div id="control-div" style="width: 500px; white-space: nowrap">
+			<text>v1</text>
+			<button id="generate-new-button">Generate new</button>
+			<button id="generate-from-seed-button">Generate from seed</button>
+			<text id="maze-radius-label">size: </text>
+			<input id="maze-radius-input" type="number" style="width: 40px">
+			<text id="maze-seed-label">seed: </text>
+			<input id="maze-seed-input" type="number" style="width: 100px">
+			<text id="moves-taken-counter-label">moves: </text>
+			<text id="moves-taken-counter">0</text>
+			<input id="load-file-input" type="file" />
+			<input id="skip-zeros-switch" type="checkbox"><text id="skip-zeros-label">Skip zeros</text></input>
+			<input id="no-help-switch" type="checkbox"><text id="no-help-label">No help</text></input>
+		</div>
+		<div id="completion-div" style="height: 30px">
+			<text style="white-space: nowrap" id="completion-message-label"></text>
+		</div>
+		<div id="maze-div"></div>
+	</body>
+</html>
